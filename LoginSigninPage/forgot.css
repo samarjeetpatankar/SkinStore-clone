@@ -1,0 +1,102 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+}
+#nav{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+}
+.conatiner_logo img{
+    width: 500px;
+    height: 60px;
+    margin: 10px 0 0 -100px;
+    
+    
+}
+
+#page {
+    display:grid ;
+    padding: 2% 8%;
+    grid-template-columns: repeat(12, 1fr);
+   grid-template-areas: 
+   ". . a a a . b b b b b .";
+}
+
+#container{
+    width: 390px;
+    height: 320px;
+    background-color: white;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 200px;
+    padding: 10px;
+}
+
+.container2{
+    width: 410px;
+    margin-top: 30px;
+    background-color: white;
+    grid-area: b;
+    height: 20vh;
+    padding: 30px;
+    margin-right: 35px;
+    
+}
+
+#button1{
+    display: block;
+      width: 100%;
+     height: 40px;
+     font-size: 16px;
+     border: 0;
+     color: white;
+     font-weight: 700;
+     background-color: #2E3337;  
+ }
+
+ #button1:hover{
+    cursor: pointer;
+    color: black;
+    background-color: turquoise;
+  
+}
+
+h2{
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+p{
+    margin-left: 20px;
+    margin-top: 25px;
+    font-family: sans-serif;
+}
+label{
+    font: 15px sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+}
+ 
+#emailinput{
+    width: 87%;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+#button{
+    width: 87%;
+    height: 45px;
+    margin-top: 25px;
+    margin-left: 20px;
+    border-radius: 2px;
+    background-color: #2E3438;
+    color: white;
+}
+#button:hover{
+    background-color: turquoise;
+    color: #000;
+}
