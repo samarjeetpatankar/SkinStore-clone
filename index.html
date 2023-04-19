@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <script
+      src="https://kit.fontawesome.com/63eddf443c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #parent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1.8px solid black;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    #logo {
+      width: 220px;
+      height: 84px;
+    }
+    #search_bar > input {
+      width: 380px;
+      height: 40px;
+      padding: 0px 10px;
+      border: 1px solid grey;
+      border-right: 0px;
+      font-size: 14px;
+      color: rgb(46, 51, 55);
+      font-family: "Lato", sans-serif;
+    }
+    #search_bar {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+    #search_bar > button {
+      height: 42px;
+      width: 45px;
+      border: 1px solid grey;
+      /* margin-left: -10px; */
+      border-color: lightgrey;
+    }
+    #search_bar > button:hover {
+      border: none;
+    }
+
+    #acc_Cart > button {
+      padding: 10px;
+      font-size: 17px;
+      width: 125px;
+      border: none;
+      background-color: #ffffff;
+      font-family: "Lato", sans-serif;
+      font-weight: 600;
+      /* margin-right: 20px; */
+    }
+    #acc_Cart > button:hover {
+      background-color: rgb(229, 229, 229);
+    }
+    #menu {
+      display: flex;
+      margin: 0 150px 10px 100px;
+    }
+    #menu > p {
+      padding: 10px;
+      font-family: "Lato", sans-serif;
+    }
+    #menu > p:hover {
+      padding: 10px;
+      /* cursor: pointer; */
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <body>
+    <div id="parent">
+      <a href="#"
+        ><img
+          id="logo"
+          src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
+          alt="logo"
+      /></a>
+      <div id="search_bar">
+        <input
+          type="text"
+          placeholder="Search for a product or brand..."
+          name="search"
+        />
+        <button type="submit">
+          <i style="font-size: 18px" class="fa fa-search"></i>
+        </button>
+      </div>
+      <div id="acc_Cart">
+        <button>
+          <i style="font-size: 20px; padding: 5px" class="fa-solid fa-user"></i>
+          Account
+        </button>
+        <button>Cart</button>
+      </div>
+    </div>
+    <div id="menu">
+      <p>Brands</p>
+      <p>Sale</p>
+      <p>New</p>
+      <p>Trending</p>
+      <p>Skin Care</p>
+      <p>Hair</p>
+      <p>Makeup</p>
+      <p>Tools</p>
+      <p>Bath & Body</p>
+      <p>Self-Care</p>
+      <p>Fragrance</p>
+      <p>Gifts</p>
+      <p>Build a Routine</p>
+      <p>Blog</p>
+    </div>
+  </body>
+</html>
