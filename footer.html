@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <style>
+      #footer {
+        display: flex;
+        gap: 50px;
+        padding: 0 100px;
+        border-bottom: 1px solid black;
+      }
+      #footer_1 > div:first-child,
+      #footer_2 > div:first-child {
+        height: 100px;
+      }
+      #footer_links {
+        display: flex;
+        gap: 50px;
+      }
+      p {
+        height: 25px;
+        /* width: 250px; */
+        padding: 5px;
+        /* margin: 5px; */
+      }
+      p:hover {
+        background-color: lightgray;
+      }
+      button {
+        width: 78px;
+        height: 42px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+      }
+      button:hover {
+        background-color: mediumturquoise;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="footer">
+      <div id="footer_1">
+        <div style="border-bottom: 1px solid black">
+          <h2>Sign up to our email list and receive 20% off your next order</h2>
+          <button>SIGN UP</button>
+        </div>
+        <div>
+          <h2>Help & Information</h2>
+          <p>Customer Service</p>
+          <p>Delivery Information</p>
+          <p>Returns & Refunds</p>
+          <p>Help Center</p>
+          <p>Track my order</p>
+        </div>
+      </div>
+      <div id="footer_2">
+        <div style="border-bottom: 1px solid black">
+          <h2>Connect with us</h2>
+        </div>
+        <div id="footer_links">
+          <div>
+            <h2>About</h2>
+            <p>Key Workers Discount</p>
+            <p>About Us</p>
+            <p>Affiliate Program</p>
+            <p>Brand Directory</p>
+            <p>Coupon Codes</p>
+            <p>Refer A Friend</p>
+            <p>Student Discount</p>
+            <p>Join SkinStore Experts</p>
+          </div>
+          <div>
+            <h2>Legal</h2>
+            <p>Cookie Information</p>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>Modern Slavery Statement</p>
+          </div>
+          <div>
+            <h2>How To Contact Us</h2>
+            <p>Message Us</p>
+            <p>Free Beauty Consultations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
