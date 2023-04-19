@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Store | Checkout</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="icon" href="https://s1.thcdn.com/checkout/resources/imgs/skstr/favicon.skstr.ico">
+    <link rel="stylesheet" href="./styles/payment.css">
+    <script src="https://kit.fontawesome.com/adb97210e8.js" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar&family=Lato&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        nav{
+            height: 100px;
+            border: 1px solid black;
+            background-color: white;
+        }
+        *{
+    box-sizing: border-box;
+    font-family: "Akshar", sans-serif;
+    font-family: "Lato", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #F2F2F2;
+}
+#payment_container{
+    width: 78%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+    
+}
+#left_div{
+    border-top: 5px solid black;
+    width: 64%;
+    background-color: white;
+}
+.gray{
+    background-color: #F2F2F2;
+    height: 35px;
+}
+#details_form,
+#delivery_form,
+#payment_form
+{
+    margin: 5px 30px 10px 30px;
+    margin-bottom: 35px;
+}
+#details_form input, #details_form select{
+    width: 100%;
+    height: 37px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+#details_form>form>p,#payment_form>form>p{
+    margin-bottom: 7px;
+}
+#details_form>h3:first-child,
+#delivery_form>h3:first-child,
+#payment_form>h3:first-child{
+    margin-bottom: 45px;
+    font-weight: 500;
+}
+/*-------------- second form-------------- */
+#delivery_form>div>p{
+    font-size: 13px;
+}
+#delivery_form>div>h5{
+    font-weight: 550;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+#delivery_form>div>h4{
+    font-weight: 550;
+    color: green;
+    margin-top: 0px;
+}
+#delivery_form>div,#delivery_form img{
+    display: none;
+}
+.zc{
+    background-color: rgba(252, 252, 252, 0.346);
+
+border-radius: 5px;
+
+height: 4em;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+color: rgb(0, 101, 173);
+
+   }
+
+/* -------------3rd form ie. payment form---- */
+#payment_form>form , #delivery_form>div{
+    padding: 5px 30px 10px 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#payment_form>form>input{
+    width: 100%;
+    height: 37px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#payment_form>form>input:last-child{
+    width: 48%;
+}
+#payment_form>form>img , #delivery_form>div>img{
+    width: 60%;
+    margin-top: -10px;
+    margin-left: -5px;
+}
+#payment_form>form>h5{
+    font-weight: 550;
+    font-size: 16px;
+}
+#payment_form>form>#expiry_info>select{
+    width: 48%;
+    height: 37px;
+    padding-left: 10px;
+}
+#payment_form>form>#expiry_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#payment_form, #delivery_form{
+    position: relative;
+}
+#payment_form>h3+img , #delivery_form>h3+img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 65px;
+    right: -9px;
+    background-color: white;
+    
+}
+
+/* -------submit div---------- */
+
+#submit_div{
+    padding: 20px;
+}
+#submit_btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    height: 60px;
+}
+#submit_btn:hover{
+    background-color: teal;
+    border: 0;
+}
+#submit_btn>img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px; 
+}
+#submit_btn>p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 280px;
+}
+/* terms&cond */
+
+#PayTandC{
+    background-color: #F2F2F2;
+    font-size: 13px;
+    text-align: center;
+    padding: 5px 30px;
+}
+/* ------------------RIGHT DIV------------------------- */
+
+
+#right_div{
+    width: 33%;
+    height: 500px;
+    margin-bottom: 25px;
+    background-color: white;
+    position: sticky;
+    top: 25px;
+    padding: 5px 22px;
+}
+#r_orderSumm,#r_delv,#r_saving,#r_saleTax,#r_TotalToPay{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 13px;
+    /* justify-content: space-around; */
+}
+#r_delAmt{
+    color: green;
+}
+
+#r_itemsdisplay{
+    /* border: 1px solid black; */
+    height: 210px;
+    padding: 5px;
+    margin-bottom: 9px;
+    overflow-y: scroll;
+}
+
+.singlebox{
+    display: flex;
+    /* border: 1px solid green; */
+    line-height: 17px;
+    margin-bottom: 4px;
+}
+.des_div p{
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-size: 13px;
+}
+.des_div p:last-child{
+    margin-bottom: 8px;
+}
+.img_div{
+    width: 35%;
+    display: flex;
+}
+.img_div>img{
+    width: 70px;
+    height: 80px;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+.des_div{
+    width: 60%;
+}
+
+#lock{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+/* delivery */
+#r_delv,
+#r_saving,
+#r_saleTax,
+#r_TotalToPay
+{
+    border-top: 1px solid #d9d8d8;
+    font-size: 14px;
+}
+#r_delv>p:first-child,
+#r_saving>p:first-child,
+#r_saleTax>p:first-child,
+#r_TotalToPay>p:first-child
+{
+    margin-left: 8px;
+}
+#r_TotalToPay{
+    font-size: 19px;
+    font-weight: 400;
+}
+
+
+/* -----------navbar---------------- */
+#topsection{
+    position: fixed;
+    background-color: white;
+    width:100%;
+    top: 0px;
+    height: 100px;
+    padding-left: 11%;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+}
+#topsection>a>img {
+    width: 200px;
+}
+#payment_container{
+    margin-top: 150px;
+}
+
+
+/* ----------------- go top ------------ */
+#go_top {
+    position: fixed;
+    bottom: 50px;
+    right: 2%;
+    width: 40px;
+    height: 30px;
+    background-color: #e4e4e4;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#go_top:hover {
+    background-color: #a9a8a8;
+}
+
+
+
+
+
+
+/* ----------Payment footer------------------ */
+#payment_footer{
+    border-top: 1px solid gray;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 78%;
+}
+#payment_footer>p{
+    font-weight: 300;
+    font-size: 13px;
+    margin-bottom: -10px;
+}
+    </style>
+</head>
+<body>
+    <a href="#"><div id="go_top"><i class="fa-solid fa-angles-up">Up</i></div></a>
+    <div id="topsection">
+        <a href="./index.html"><img src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg" alt=""></a>
+    </div>
+    <div id="payment_container">
+        <div id="left_div">
+            <div id="details_form">
+                <h3>1. Shipping Address</h3>
+                <form>
+                    <p>* Country/Region</p>
+                    <select id="s_country">
+                        <option value="India">India</option>
+
+      <option value="United States">United States</option>
+
+      <option value="United Kingdom">United Kingdom</option>
+
+      <option value="China">China</option>
+
+      <option value="Taiwan">Taiwan</option>
+
+      <option value="Singapore">Singapore</option>
+
+      <option value="Korea">Korea</option>
+
+      <option value="Japan">Japan</option>
+
+      <option value="Hong Kong">Hong Kong</option>
+                    </select>
+                    <p>* Full Name</p>
+                    <input type="text" id="s_name"><br>
+                    <p>* Zip Code/Postcode</p>
+                    <input type="text" id="s_zipcode"><br>
+                    <p>Company Name</p>
+                    <input type="text" id="s_company"><br>
+                    <p>* Address</p>
+                    <input type="text" id="s_address"><br>
+                    <p>Address 2</p>
+                    <input type="text" id="s_address2"><br>
+                    <p>* Apartment/Suite number</p>
+                    <input type="text" id="s_apartment"><br>
+                    <p>* Town/City</p>
+                    <input type="text" id="s_town"><br>
+                    <p>* State or Province</p>
+                    <input type="text" id="s_state"><br>
+                    <p>* Contact Number</p>
+                    <input type="tel" id="s_contactNumber"><br>
+                </form>
+            </div>
+            <div class="gray"></div>
+            <div id="delivery_form">
+                <h3>2. Select Delivery Option</h3>
+                <p class="zc">
+                  <input class="tc" style="width: 152px; height: 2em; margin-left: -25%; " type="checkbox">
+                    Standard Delivary <h5>Delivered within 8-12 working days</h5>
+                    
+                 </p>
+                <div>
+                    <h5>Tracked Delivery</h5>
+                    <p>Delivered within 3-5 working days!</p>
+                    <h4>FREE</h4>
+                    <p>Receive updates to monitor the progress of your delivery</p>
+                </div>
+            </div>
+            <div class="gray"></div>
+            <div id="payment_form">
+                <h3>3. Select Payment Method</h3>
+                <form>
+                    <h5>Credit/Debit Card</h5>
+                    <!-- <img src="./images/creditcards.png" alt=""> -->
+                    <!-- <img src="https://s1.thcdn.com/checkout/resources/images/3c2e42cbf9d0b0df0d3b3bb81aa41d6a.svg" alt="">
+                    <img src="https://s1.thcdn.com/checkout/resources/images/57987be4eb98b4c77644d93d92df80fa.svg" alt=""> -->
+                     
+                    <p>* Card Number</p>
+                    <input type="number" id="c_num"><br>
+                    <p>* Name on card</p>
+                    <input type="text" id="c_name"><br>
+                    <p>* Expiry Date</p>
+                    <div id="expiry_info">
+                        <select id="expiry-month">                            
+                            <option value="">Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="11">11</option>
+                        </select>
+                        <select id="expiry-year">
+                            <option value="">Year</option>
+                            <option value="2022">22</option>
+                            <option value="2023">23</option>
+                            <option value="2024">24</option>
+                            <option value="2025">25</option>
+                            <option value="2026">26</option>
+                            <option value="2027">27</option>
+                            <option value="2028">28</option>
+                            <option value="2029">29</option>
+                            <option value="2030">30</option>
+                            <option value="2031">31</option>
+                            <option value="2032">32</option>
+                            <option value="2033">33</option>
+                            <option value="2034">34</option>
+                            <option value="2035">35</option>
+                            <option value="2036">36</option>
+                            <option value="2037">37</option>
+                            <option value="2038">38</option>
+                            <option value="2039">39</option>
+                            <option value="2040">40</option>
+                            <option value="2041">41</option>
+                            <option value="2042">42</option>
+                        </select>
+                    </div>
+                    <p>* Security Code (CV2)</p>
+                    <input type="number" id="c_security">
+                </form>
+            </div>
+            <div class="gray"></div>
+            <div id="submit_div">
+                <a href="paymentsuccess.html" style="text-decoration: none;"> 
+                <button id="submit_btn">
+                  <i class="fa-solid fa-unlock-keyhole" id="lock" style="color: #ffffff;"></i>
+                    <p>SUBMIT MY ORDER</p>
+                </button>
+                </a>
+            </div>
+            <div id="PayTandC">
+                <p>By placing this order, you are confirming that you agree to our Terms and Conditions and Privacy Policy.</p>
+            </div>
+        </div>
+        <!-- <div id="right_div">
+            <div id="r_orderSumm">
+                <p>Order Summary</p>
+                <p id="r_count"> -->
+                    <!-- appended -->
+                <!-- </p>
+            </div>
+            <div id="r_itemsdisplay"> -->
+                <!-- appended -->
+            <!-- </div>
+            <div id="r_delv">
+                <p>Delivery</p>
+                <p id="r_delAmt">
+                    Free
+                </p>
+            </div>
+            <div id="r_saving">
+                <p>Savings</p>
+                <p id="r_saveamt"> -->
+                    <!-- appended -->
+                <!-- </p>
+            </div>
+            <div id="r_saleTax">
+                <p>Sales Tax</p>
+                <p id="r_taxAmt"> -->
+                    <!-- appended -->
+                <!-- </p>
+            </div>
+            <div id="r_TotalToPay">
+                <p>Total to pay</p>
+                <p id="r_TotAmt"> -->
+                    <!-- appended -->
+                <!-- </p>
+            </div>
+        </div> -->
+    </div>
+    <div id="payment_footer">
+        <p>THGPP LLC</p>
+        <p>1209 Orange Street, Wilmington, New Castle, DE 19801. United States</p>
+    </div>
+</body>
+</html>

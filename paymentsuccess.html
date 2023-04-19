@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Successful</title>
+	 <!-- this is the skinStore icon in the title -->
+	 <link rel = "icon" href = 
+	 "https://www.skinstore.com/favicon.ico?v=skstrus8.3912.4203" 
+			 type = "image/x-icon">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			color: #4CAF50;
+			font-size: 40px;
+			margin-top: 50px;
+		}
+		p {
+			font-size: 20px;
+			margin-top: 20px;
+		}
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			margin-top: 50px;
+		}
+		.btn:hover {
+			background-color: #3e8e41;
+		}
+		#nav{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+}
+.conatiner_logo img{
+    width: 500px;
+    height: 60px;
+    margin: 10px 0 0 5px;
+}
+
+#track-id{
+    font-size: 25px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+    color: black;
+}
+
+	</style>
+</head>
+<body>
+	<div id="nav">
+        <div class="conatiner_logo">
+            <a href="index.html">
+                <img src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg" alt="">
+            </a>
+        </div>
+    </div>
+  
+	<h1>Payment Successful!</h1>
+	<p>Thank you for your purchase. Your order will be shipped soon.</p>
+    <h1 id="track-id" >Your Tracking Number: <span id="randomNum">5</span>
+    </h1>
+    <h1 id="delivery-id">delivery between 2-3 days.</h1>
+	<button onclick="redirectToHome()" class="btn">Continue Shopping</button>
+</body>
+</html>
+<script>
+	/* redirect */
+// function redirectToHome(){
+//     window.location.href = "index.html";
+// }
+
+var showNum = document.querySelector("#randomNum");
+    var randNum = Math.floor(Math.random() * 10) + 1;
+    // console.log(randNum);
+    var seq = (Math.floor(Math.random() * 10000000000) + 10000).toString().substring();
+    console.log(seq);
+    showNum.innerText = seq;
+</script>
