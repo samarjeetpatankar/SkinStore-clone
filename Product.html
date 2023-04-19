@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>View All Products - SkinStore</title>
+    <link rel="stylesheet" href="productPage.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/f7dfcdf24b.js" crossorigin="anonymous"></script>
+
+    <link rel ="icon" href = "https://www.skinstore.com/favicon.ico?v=skstrus8.3912.4203" type = "image/x-icon">
+   
+</head>
+
+<body>
+    <div id="body">    
+    <div id="flexdisplaypart">
+
+         <div >
+                <div class="ProductTypeTittle">
+                    <h1>View All Products</h1>
+                </div>
+                
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            <div id="sortingarea">    
+                <div id="FilterAndSortBox">
+                    <div>
+                    <h3>Sort by Price</h3>
+                    <select  onchange="Tsort()" id="sortT">
+                        <option value="">Sort By Price</option>
+                        <option value="high">High to Low</option>
+                        <option value="low">Low to High</option>
+                    </select></div>
+                    <div>
+                    <h3>Filter by Brand name</h3>
+                    <select id="filter" onchange="filterit()">
+                        <option value="">Filter by Brand Name</option>
+                        <option value="25% off with code LUCKY">CHRISTOPHE ROBIN</option>
+                        <option value="30% off with code DANIEL">DANIEL SANDLER</option>
+                        <option value="20% off with code SCAR">DECK OF SCARLET</option>
+                        <option value="15% off with code WANDE">WANDER BEAUTY</option>
+                        <option value="40% off with code ARDEN">ELIZABETH ARDEN</option>
+                    </select>
+                </div>
+                    
+                     
+                </div>
+            </div>
+        </div>
+    
+                <!-- Content  -->
+                <div id="container"></div>
+                <!-- *********** -->
+
+    </div>
+
+</div>
+</body>
+</html>
+
+<script src="productPage.js"></script>
