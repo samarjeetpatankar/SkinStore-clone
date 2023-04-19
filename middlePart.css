@@ -1,0 +1,226 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    overflow-x: hidden;
+overflow-y: scroll;
+  }
+
+  
+  #someOtherOffer {
+    display: flex;
+    padding: 18px 0px;
+    background-color: rgb(242, 242, 242);
+    justify-content: center;
+    width: 100vw;
+  }
+  #someOtherOffer a {
+    text-decoration: none;
+    font-size: 15px;
+    word-spacing: 1.4px;
+    color: #2e3337;
+    letter-spacing: 0.5px;
+  }
+  #someOtherOffer div {
+    display: inline-block;
+    margin: 0px 25px;
+  }
+
+  #shop {
+    text-align: center;
+    font-size: 25px;  
+    color: white;
+    background-color: black;
+    height: 36px;
+    align-items: center;
+  }
+  #shop:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  h1 {
+    text-align: center;
+  }
+  #Imageline_1 {
+    display: flex;
+}
+
+#Imageline_1 > img{
+    height: 200px;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.bottom-left {
+    position: absolute;
+    bottom: 180px;
+    left: 50px;
+  }
+
+  .bottom-left > h1 {
+    font-size: 50px;
+  }
+
+  .bottom-left > button {
+    font-size: 25px;
+    color: white;
+    background-color: #2e3337;
+    margin-left: 80px;
+  }
+ 
+  
+  button {
+    border: none;
+    
+  }
+  .btn {
+    margin-top: 39px;
+    background-color: #f2f2f2; 
+    border: 1px solid #f2f2f2; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    text-align: center;
+    width: 390px;
+    margin-left: 450px; 
+    margin-bottom: 50px;
+  }
+
+  .btn > button {
+    font-size: 20px;
+  }
+
+  #sell {
+    text-decoration: underline;
+  }
+
+  .bodyFirstTitle {
+    height: 70px;
+    font-size: 34px;
+    font-weight: 400;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.bodyFirstDetails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+
+
+.bodyFirstDetails>div:hover, .companyLogo>div:hover, .trendingOffer>div:hover, .overTheBlogDetails>div:hover {
+    cursor: pointer;
+}
+
+.bodyFirstDetails img {
+    width: 100%;
+}
+
+
+.productDetails {
+    width: 85%;
+    /* border: 1px solid black; */
+    margin: auto;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    /* line-height: 0.; */
+}
+
+.strikedOff {
+    margin-top: 5px;
+}
+
+.bodyFirstDetails .shopNow {
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+    background-color: #333;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    /* border: 1px solid black; */
+}
+
+.shopNow:hover {
+    background-color: #28bdb7;
+    cursor: pointer;
+}
+
+.trendingoffers {
+    display: grid;
+  
+    top: 0;
+  
+    bottom: 0;
+  
+    left: 0;
+  
+    right: 0;
+  
+    margin: auto;
+  
+    width: 83%;
+  
+    grid-template-columns: repeat(3, 1fr);
+  
+    justify-content: space-around;
+  
+    justify-items: center;
+  
+    align-content: space-around;
+  
+    align-items: center;
+  }
+  
+  .card {
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    width: 30em;
+  
+    margin-bottom: 1.5em;
+  }
+  
+  .card img {
+    width: 30em;
+  
+    border-radius: 50%;
+  }
+  
+  .card p {
+    font-size: larger;
+  }
+  
+  .card span {
+    margin-top: -0.5em;
+  
+    color: rgb(52, 51, 51);
+  
+    font-size: medium;
+  
+    font-weight: 90;
+  
+    text-align: center;
+  }
+  
+  .card button {
+    border: 1.5px solid rgba(87, 86, 86, 0.837);
+  
+    background-color: transparent;
+  
+    padding: 1em;
+  
+    font-size: medium;
+  
+    margin-top: 1em;
+  }
