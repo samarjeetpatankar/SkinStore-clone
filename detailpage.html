@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <!-- Here stylesheet is connected -->
+    <link rel="stylesheet" href="productPage.css">
+
+    <!-- belows stylesheet for icons from fontawesome  -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/f7dfcdf24b.js" crossorigin="anonymous"></script>
+
+    <!-- this is the skinStore icon in the title -->
+    <link rel = "icon" href = 
+    "https://www.skinstore.com/favicon.ico?v=skstrus8.3912.4203" 
+            type = "image/x-icon">       
+
+    <style>
+      /* *{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      } */
+      body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        /* background-color: aquamarine; */
+      }
+      #BothHalves{
+        width: 100%;
+        display: flex;
+        height: fit-content;
+        /* background-color: #444; */
+        
+        /* flex-wrap: wrap; */
+      }
+      #slides-container{
+      
+       width: 70%;
+       padding: 4%;
+      }
+      .mySlides{
+        width: 100%;
+       
+         height: 500px; 
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        
+      }
+      /* Slide Buttons */
+      .button{
+        position: absolute;
+        top: 90%;
+        transform: translateY(-50%);
+        z-index: 1;
+        border: none;
+        display: inline-block;
+        padding: 8px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        background-color: inherit;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .display-left {
+        left: 1%;
+      }
+      
+      .display-right {
+        right: 43.5%;
+      }
+      .black{
+          color: #fff;
+          background-color: #000;
+      }
+      .black:hover{
+          color: #000 ;
+          background-color:  #cacece;
+         
+      }
+      .display-left{
+        /* margin-bottom: 100px; */
+
+      }
+     .display-right{
+        /* position: fixed; */
+     }
+
+
+
+
+      /* Collapsible Button */
+      .collapsible {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .active, .collapsible:hover {
+        background-color: #ccc;
+      }
+
+/* Style the collapsible content. Note: hidden by default */
+    .coll-content {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      } 
+
+
+      /* For secondHalves */
+      #secondHalves{
+        /* border: 2px solid green; */
+        width: 50%;
+        padding: 50px;
+        /* margin-left: 50px; */
+      }
+      #secondHalves img{
+        width: 500px;
+      }
+
+
+      /* Table */
+      .coll-content p table {
+        /* border: 2px, solid, red; */
+          /* border-collapse: collapse; */
+      }
+
+      .thead{
+         display: block;
+         padding-right: 50px;
+      }
+
+
+      /* --------- Style in JS part----------- */
+
+      .DetailsAreHere{
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+        /* width: 100% */
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        line-height: 20px;
+       
+      }
+      #BothHalves{
+        box-sizing: border-box;   
+      }
+      #button{
+        height: 30px;
+        width: 50%;
+        color: #ffffff;
+        background-color: rgb(51,51,51);
+        border: none;
+        border-radius: 5px;
+      }
+      #button:hover{
+        color: rgb(95, 90, 90) ;
+        background-color: rgb(62, 209, 202);
+        cursor: pointer;
+      }
+      #parent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1.8px solid black;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    #logo {
+      width: 220px;
+      height: 84px;
+    }
+    #search_bar > input {
+      width: 380px;
+      height: 40px;
+      padding: 0px 10px;
+      border: 1px solid grey;
+      border-right: 0px;
+      font-size: 14px;
+      color: rgb(46, 51, 55);
+      font-family: "Lato", sans-serif;
+    }
+    #search_bar {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+    #search_bar > button {
+      height: 42px;
+      width: 45px;
+      border: 1px solid grey;
+      /* margin-left: -10px; */
+      border-color: lightgrey;
+    }
+    #search_bar > button:hover {
+      border: none;
+    }
+
+    #acc_Cart > button {
+      padding: 10px;
+      font-size: 17px;
+      width: 125px;
+      border: none;
+      background-color: #ffffff;
+      font-family: "Lato", sans-serif; 
+      font-weight: 600;
+      /* margin-right: 20px; */
+    }
+    #acc_Cart > button:hover {
+      background-color: rgb(229, 229, 229);
+    }
+    #menu {
+      display: flex;
+      margin: 0 150px 10px 100px;
+    }
+    #menu > p {
+      padding: 10px;
+      font-family: "Lato", sans-serif;
+    }
+    #menu > p:hover {
+      padding: 10px;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+    </style>
+  </head>
+  <body>
+
+
+    <!-- Nabar details -->
+    <div id="parent">
+        <a href="#"
+          ><img
+            id="logo"
+            src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
+            alt="logo"
+        /></a>
+        <div id="search_bar">
+          <input
+            type="text"
+            placeholder="Search for a product or brand..."
+            name="search"
+          />
+          <button type="submit">
+            <i style="font-size: 18px" class="fa fa-search"></i>
+          </button>
+        </div>
+        <div id="acc_Cart">
+          <button>
+            <i style="font-size: 20px; padding: 5px" class="fa-solid fa-user"></i>
+            Account
+          </button>
+          <button>Cart</button>
+        </div>
+      </div>
+      <div id="menu">
+        <p>Brands</p>
+        <p>Sale</p>
+        <p>New</p>
+        <p>Trending</p>
+        <p>Skin Care</p>
+        <p>Hair</p>
+        <p>Makeup</p>
+        <p>Tools</p>
+        <p>Bath & Body</p>
+        <p>Self-Care</p>
+        <p>Fragrance</p>
+        <p>Gifts</p>
+        <p>Build a Routine</p>
+        <p>Blog</p>
+      </div>
+
+
+   <!-------------  Product Detail ---------------->
+
+
+    <h2 id="productName"></h2>
+
+    <div id="BothHalves">
+      <div id="slides-container" >
+       
+        <img id="firstImg"
+          class="mySlides"
+          src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11535230-2295043599450781.jpg"
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11264667-1604898732114598.jpg"
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11264667-1514898732210571.jpg"
+          style="width: 100%"
+        />
+        <button class="button black display-left" onclick="plusDivs(-1)">
+          &#10094;
+        </button>
+        <button class="button black display-right" onclick="plusDivs(1)">
+          &#10095;
+        </button>
+        
+
+      </div>
+      <div id="secondHalves">
+            
+      </div>
+    </div>
+    <br><br>
+    <hr>
+        <!-- Collapsible Buttons -->
+        <button type="button" class="collapsible"> Description</button>
+        <div class="coll-content">
+          <br>
+            <p>Accentuate your eyes with the Illamasqua Masquara Raven; an amplifying black mascara to thicken, lengthen and volumize lashes. With an intense formula, the mascara delivers ultimate impact and definition, allowing you to create a look as dramatic as desired. Its specially designed brush offers maximum control, whilst capturing every lash from the root for bigger, bolder results.</p>
+        </div>
+        <button type="button" class="collapsible"> Ingredients</button>
+        <div class="coll-content">
+          <br>
+            <p>Aqua (Water), Copernicia Cerifera Cera/Copernicia Cerifera (Carnauba) Wax, Octyldodecanol, Cera Alba/Beeswax, Glyceryl Stearate,&Nbsp;Glycerin, Stearic Acid, Polyvinyl Alcohol, Pvp, Sorbitan Sesquioleate, Lecithin, Ricinus Communis Seed Oil/Ricinus Communis&Nbsp;(Castor) Seed Oil, Propylene Glycol, Silica, Triethanolamine, Tocopheryl Acetate, Retinyl Palmitate, Sodium Hydroxide,&Nbsp;Tetrasodium Edta,Sodium Dehydroacetate, Benzyl Alcohol, Phenoxyethanol, Propylparaben, Metylparaben [+/- May Contain: &Nbsp;Ci 77499&Nbsp;(Iron Oxide)].</p>
+        </div>
+        <button type="button" class="collapsible"> Product Details></button>
+        <div class="coll-content">
+             <br>
+                <table >
+              <tr>
+                <th class="thead">Volume:</th>
+                <td>226ml</td>
+              </tr>
+
+             </table>
+             <hr>
+             <table >
+              <tr>
+                <th class="thead"> Directions:</th>
+                <td>
+                  <ol>
+                    <li>Apply onto wet skin and gently massage with fingertips onto problem areas.</li>
+                    <li>Rinse and pat dry.</li>
+                    <li>Follow with moisturizer.</li>
+                    <li>Use 1-2 times a week as tolerated.</li>
+                  </ol>
+                </td>
+              </tr>
+             </table>
+             <hr>
+             <table >
+              <tr>
+                <th class="thead">Size:  </th>
+                <td>Another Size</td>
+              </tr>
+            
+             </table>
+             <hr>
+             <table >
+              <tr>
+                <th class="thead">    Ingredients:  </th>
+                <td>Pumice, Water/Aqua/Eau, Glycolic Acid, Sodium Cocoyl Isethionate, Lactic Acid, Dimethicone, Stearic Acid, Cetearyl Alcohol, Sodium Hydroxide, Palmitic Acid, Glycerin, C12-15 Alkyl Benzoate, Sorbitol, Colloidal Oatmeal, Tocopherol, Chrysanthemum Parthenium (Feverfew) Extract, Camellia Sinensis Leaf Extract, Glycyrrhiza Glabra (Licorice) Root Extract, Salix Nigra (Willow) Bark Extract, Bisabolol, Hydrogenated Coconut Acid, Xanthan Gum, Steareth-20, Steareth-21, Myristic Acid, Sodium Isethionate, Phenoxyethanol, Potassium Sorbate, Sodium Benzoate, Leuconostoc/Radish Root Ferment Filtrate, EDTA.</td>
+              </tr>
+            </table>
+        </div>
+
+         <!-------------  Footer  ---------------->
+
+  <div class="FooterLine"></div>
+    
+  </body>
+</html>
+
+<script>
+    // Slides function
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs((slideIndex += n));
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+  }
+
+// Collapsible Button
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+// Content in secondHalves
+var obj = JSON.parse(localStorage.getItem("ProductKiDetails"))
+
+var div = document.createElement("div")
+div.setAttribute("class", "DetailsAreHere")
+
+var img = document.querySelector("#firstImg")
+img.setAttribute("src", obj.image_url);
+
+var Heading = document.createElement("p")
+Heading.textContent = obj.name;
+Heading.style.fontSize = "24px"
+
+var price = document.createElement("p")
+        price.textContent = `$${obj.price}`;
+        // price.style.marginTop = "3%"
+        price.style.fontSize = "24px"
+        price.style.fontWeight = "bold"
+
+var line = document.createElement("hr") 
+
+var box = document.createElement("p")
+box.textContent = obj.box
+
+var InStocks = document.createElement("p")
+InStocks.textContent = "In Stock"
+
+var button = document.createElement("button")
+button.textContent = "Add To Cart"
+button.addEventListener("click", function(){
+  cartAdd(obj);
+})
+button.setAttribute("id", "button")
+        
+var line2 = document.createElement("hr")  
+
+var p = document.createElement("p")
+p.textContent = "Complimentary gift will be awarded at the cart. Offer valid for a limited time only, while stocks last."
+
+div.append(Heading,price, line, box ,InStocks, button, line2, p)
+document.querySelector("#secondHalves").append(div)
+
+
+
+
+// Add TO CART
+
+var cartThings = JSON.parse(localStorage.getItem("cartthings")) || [];
+function cartAdd(data) {
+  cartThings.push(data);
+
+  localStorage.setItem("cartthings", JSON.stringify(cartThings));
+  alert("added to cart");
+
+
+var cartLength = JSON.parse(localStorage.getItem("cartthings"))
+document.querySelector("#cardAval").innerHTML=`There are currently ${cartLength.length} items in your cart.`;
+document.querySelector("#cartLen").innerHTML=`${cartLength.length}`;
+
+}
+</script>
