@@ -284,9 +284,8 @@ document.querySelector("#cartLen").innerHTML=`${cartLength.length}`;
 }
 
 
-console.log(cartArray);
-console.log(cartArray);
-
+// console.log(cartArray);
+// console.log(cartArray);
 // Sorting Function 
 
 function Tsort(){
@@ -305,6 +304,8 @@ function Tsort(){
     reLoadM(productData)
 } 
 
+   
+ 
 
 // Filter Function
 
@@ -327,6 +328,6 @@ function Tsort(){
 
  
    function sendToDetails(data){
-      localStorage.setItem("ProductDetails", JSON.stringify(data));
-      window.location.href='detail.html'
+      localStorage.setItem("ProductKiDetails", JSON.stringify(data));
+      window.location.href='detailpage.html'
    }
