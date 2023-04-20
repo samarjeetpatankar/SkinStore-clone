@@ -1,5 +1,7 @@
 # SkinStore-clone
 
+Depolyed Link - https://skinstore-clone-pt12.netlify.app/
+
 Team Members -
 
 1.   pw11_182  Samarjeet Patankar - Login Signin page and payment page
