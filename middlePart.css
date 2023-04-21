@@ -1,7 +1,7 @@
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 45px;
   align-items: center;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -159,10 +159,10 @@ margin-top: 5px;
 
 .bodyFirstDetails .shopNow {
 width: 90%;
-padding: 15px;
+padding: 15px;  
 text-align: center;
 margin: auto;
-background-color: #333;
+background-color: #1b1b1b;
 color: white;
 margin-top: 15px;
 margin-bottom: 35px;
