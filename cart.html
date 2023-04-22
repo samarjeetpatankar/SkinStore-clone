@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <script
+      src="https://kit.fontawesome.com/63eddf443c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #parent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1.8px solid black;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    #logo {
+      width: 220px;
+      height: 84px;
+    }
+    #search_bar > input {
+      width: 380px;
+      height: 40px;
+      padding: 0px 10px;
+      border: 1px solid grey;
+      border-right: 0px;
+      font-size: 14px;
+      color: rgb(46, 51, 55);
+      font-family: "Lato", sans-serif;
+    }
+    #search_bar {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+    #search_bar > button {
+      height: 42px;
+      width: 45px;
+      border: 1px solid grey;
+      /* margin-left: -10px; */
+      border-color: lightgrey;
+    }
+    #search_bar > button:hover {
+      border: none;
+    }
+
+    #acc_Cart > button {
+      padding: 10px;
+      font-size: 17px;
+      width: 125px;
+      border: none;
+      background-color: #ffffff;
+      font-family: "Lato", sans-serif;
+      font-weight: 600;
+      /* margin-right: 20px; */
+    }
+    #acc_Cart > button:hover {
+      background-color: rgb(229, 229, 229);
+    }
+    #menu {
+      display: flex;
+      margin: 0 150px 10px 100px;
+    }
+    #menu > p {
+      padding: 10px;
+      font-family: "Lato", sans-serif;
+    }
+    #menu > p:hover {
+      padding: 10px;
+      /* cursor: pointer; */
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <body>
+    <div id="parent">
+      <a href="#"
+        ><img
+          id="logo"
+          src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
+          alt="logo"
+      /></a>
+      <div id="search_bar">
+        <input
+          type="text"
+          placeholder="Search for a product or brand..."
+          name="search"
+        />
+        <button type="submit">
+          <i style="font-size: 18px" class="fa fa-search"></i>
+        </button>
+      </div>
+      <div id="acc_Cart">
+        <button>
+          <i style="font-size: 20px; padding: 5px" class="fa-solid fa-user"></i>
+          Account
+        </button>
+        <button>Cart</button>
+      </div>
+    </div>
+    <div id="menu">
+      <p>Brands</p>
+      <p>Sale</p>
+      <p>New</p>
+      <p>Trending</p>
+      <p>Skin Care</p>
+      <p>Hair</p>
+      <p>Makeup</p>
+      <p>Tools</p>
+      <p>Bath & Body</p>
+      <p>Self-Care</p>
+      <p>Fragrance</p>
+      <p>Gifts</p>
+      <p>Build a Routine</p>
+      <p>Blog</p>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My E-Commerce Website</title>
+	<link rel="stylesheet" href="cart.css">
+</head>
+<body>
+	<!-- <h1>My E-Commerce Website</h1> -->
+	<!-- <div id="products">
+		<div class="product">
+			<h3>Product 1</h3>
+			<p>Price: $10</p>
+			<button class="add-to-cart" data-id="1">Add to Cart</button>
+		</div>
+		<div class="product">
+			<h3>Product 2</h3>
+			<p>Price: $20</p>
+			<button class="add-to-cart" data-id="2">Add to Cart</button>
+		</div>
+		<div class="product">
+			<h3>Product 3</h3>
+			<p>Price: $30</p>
+			<button class="add-to-cart" data-id="3">Add to Cart</button>
+		</div>
+		<div class="product">
+			<h3>Product 4</h3>
+			<p>Price: $40</p>
+			<button class="add-to-cart" data-id="4">Add to Cart</button>
+		</div>
+	</div> -->
+
+	<div id="cart">
+		<h2>You Cart</h2>
+		<table>
+			<thead>
+				<tr class="row">
+					<th>Product</th>
+					<th>Product Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Sub Total</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody id="cart-items">
+			</tbody>
+			<tfoot>
+				<tr>
+					<td></td>
+					<td colspan="3" class="CT">Cart total:</td>
+					<td id="cart-total">$0</td>
+					<td></td>
+				</tr>
+				
+			</tfoot>
+		</table>
+		<div id="gift">
+			<div class="freeProductSelection freeProductSelection-show" data-freeproductselection="" data-free-gift-id="1090607" data-auto-expand="true" data-qualifedgift="true">
+				<button class="freeProductSelection_toggleOpen" type="button" data-js-element="freeProductSelection_toggleOpen" aria-expanded="true">
+				<h2 class="freeProductSelection_title" data-title-viewed="">
+					Gift Selection
+					<span class="freeProductSelection_chevron "></span>
+				</h2>
+
+				<span class="freeProductSelection_qualify">
+					Select a gift for you or someone you love when you spend $110 or more
+				</span>
+
+						<span class="freeProductSelection_qualifiedContainer">
+							<span class="freeProductSelection_isQualified" data-js-element="freeProductSelection_isQualified">
+							<span class="freeProductSelection_isQualifiedText">
+								
+							</span>
+							<span class="freeProductSelection_isQualifiedIcon " aria-hidden="true"></span>
+							</span>
+							<span class="freeProductSelection_selectedGifts"> <strong data-total-selected="0" class="notranslate"></strong><strong data-total-selected="" class="notranslate"></strong>
+							</span>
+
+						</span>
+
+
+				</button>
+
+				<div class="freeProductSelection_itemContainer" data-js-element="freeProductSelection_itemContainer">
+						<div class="freeProductSelection_tierContainer" data-product-tier="" data-tier-id="10906070">
+						<div class="freeProductSelection_qualify">
+						</div>
+
+						<div class="freeProductSelection_qualifiedContainer">
+							<div class="freeProductSelection_isQualified" data-js-element="freeProductSelection_isQualified">
+							<div class="freeProductSelection_isQualifiedText">
+								Qualified
+							</div>
+							<div class="freeProductSelection_isQualifiedIcon " aria-hidden="true"></div>
+							</div>
+							<div class="freeProductSelection_selectedGifts"> <strong data-current-selected="0" class="notranslate">0</strong>/<strong data-max-selected="" class="notranslate">1</strong> free gifts selected
+							</div>
+
+						</div>
+						
+						<div class="freeProductSelection_tierContainerItems">
+								<div class="freeProductSelection_item">
+									<a href="javascript:;" class="freeProductSelection_itemProductBlock" data-js-element="freeProductSelection_itemProductBlock" data-sku="13303795" data-offer="1090607" data-master-sku="13303795" data-tier="0" data-gift-id="1330379510906070" data-product-item="">
+									<div class="freeProductSelection_itemProductBlock_imageContainer" data-free-gift-image="13303795">
+										<img class="freeProductSelection_itemProductBlock_image" alt="" src="https://s1.thcdn.com//productimg/70/70/13303795-1724973340130200.jpg">
+
+									</div>
+									<div class="freeProductSelection_itemProductBlock_title">
+										SkinCeuticals AGE Eye Complex 4ml (Worth $22.00)
+
+										<div class="freeProductSelection_productVariation_optionDesc" data-option-desc=""></div>
+									</div>
+									<div class="freeProductSelection_infoIconContainer" data-popup-select-id="13303795">
+										<button data-js-element="freeProductSelection_freeGiftInfoIcon" class="freeProductSelection_freeGiftInfoButton" data-product-info="" aria-label="More Information" title="More Information" type="button">
+										<svg class="freeProductSelection_infoIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill="none" fill-rule="evenodd"><circle class="freeProductSelection_infoIconCircle" cx="12" cy="12" r="12" fill="#CCC"></circle><path fill="#333" d="M14.82 17.49l-.19.798c-.569.232-1.024.409-1.362.53a3.485 3.485 0 0 1-1.181.182c-.69 0-1.225-.174-1.608-.52a1.706 1.706 0 0 1-.573-1.32c0-.207.014-.42.043-.636.029-.216.074-.46.138-.733l.711-2.596c.064-.248.118-.484.16-.707.042-.2.063-.403.065-.608 0-.332-.066-.563-.2-.694-.132-.13-.384-.196-.76-.196-.184 0-.373.031-.565.09-.194.058-.36.116-.498.169l.19-.8c.466-.197.911-.364 1.337-.503.426-.14.83-.21 1.21-.21.684 0 1.212.172 1.583.513.37.34.556.783.556 1.329 0 .112-.012.311-.038.595a4.1 4.1 0 0 1-.143.782l-.708 2.586c-.058.208-.11.445-.155.712-.047.266-.07.468-.07.604 0 .345.074.578.223.703.15.125.408.186.776.186.171 0 .367-.031.585-.093.218-.062.376-.117.474-.164zM15 6.634c0 .45-.165.835-.496 1.151-.33.318-.728.476-1.193.476-.466 0-.865-.158-1.199-.476-.333-.316-.5-.7-.5-1.152 0-.449.167-.834.5-1.155.334-.32.733-.479 1.2-.479.464 0 .863.16 1.192.48.331.32.496.705.496 1.154z"></path></g></svg>
+
+										</button>
+									</div>
+									</a>
+
+								</div>
+
+								<div class="freeProductSelection_item">
+									<a href="javascript:;" class="freeProductSelection_itemProductBlock" data-js-element="freeProductSelection_itemProductBlock" data-sku="13529811" data-offer="1090607" data-master-sku="13529811" data-tier="0" data-gift-id="1352981110906070" data-product-item="">
+									<div class="freeProductSelection_itemProductBlock_imageContainer" data-free-gift-image="13529811">
+										<img class="freeProductSelection_itemProductBlock_image" alt="" src="https://s1.thcdn.com//productimg/70/70/13529811-1004952925911490.jpg">
+
+									</div>
+									<div class="freeProductSelection_itemProductBlock_title">
+										VICHY Liftactiv Specialist B3 5ml (Worth $8.50)
+
+										<div class="freeProductSelection_productVariation_optionDesc" data-option-desc=""></div>
+									</div>
+									<div class="freeProductSelection_infoIconContainer" data-popup-select-id="13529811">
+										<button data-js-element="freeProductSelection_freeGiftInfoIcon" class="freeProductSelection_freeGiftInfoButton" data-product-info="" aria-label="More Information" title="More Information" type="button">
+										<svg class="freeProductSelection_infoIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill="none" fill-rule="evenodd"><circle class="freeProductSelection_infoIconCircle" cx="12" cy="12" r="12" fill="#CCC"></circle><path fill="#333" d="M14.82 17.49l-.19.798c-.569.232-1.024.409-1.362.53a3.485 3.485 0 0 1-1.181.182c-.69 0-1.225-.174-1.608-.52a1.706 1.706 0 0 1-.573-1.32c0-.207.014-.42.043-.636.029-.216.074-.46.138-.733l.711-2.596c.064-.248.118-.484.16-.707.042-.2.063-.403.065-.608 0-.332-.066-.563-.2-.694-.132-.13-.384-.196-.76-.196-.184 0-.373.031-.565.09-.194.058-.36.116-.498.169l.19-.8c.466-.197.911-.364 1.337-.503.426-.14.83-.21 1.21-.21.684 0 1.212.172 1.583.513.37.34.556.783.556 1.329 0 .112-.012.311-.038.595a4.1 4.1 0 0 1-.143.782l-.708 2.586c-.058.208-.11.445-.155.712-.047.266-.07.468-.07.604 0 .345.074.578.223.703.15.125.408.186.776.186.171 0 .367-.031.585-.093.218-.062.376-.117.474-.164zM15 6.634c0 .45-.165.835-.496 1.151-.33.318-.728.476-1.193.476-.466 0-.865-.158-1.199-.476-.333-.316-.5-.7-.5-1.152 0-.449.167-.834.5-1.155.334-.32.733-.479 1.2-.479.464 0 .863.16 1.192.48.331.32.496.705.496 1.154z"></path></g></svg>
+
+										</button>
+									</div>
+									</a>
+
+								</div>
+
+								<div class="freeProductSelection_item">
+									<a href="javascript:;" class="freeProductSelection_itemProductBlock" data-js-element="freeProductSelection_itemProductBlock" data-sku="13946074" data-offer="1090607" data-master-sku="13946074" data-tier="0" data-gift-id="1394607410906070" data-product-item="">
+									<div class="freeProductSelection_itemProductBlock_imageContainer" data-free-gift-image="13946074">
+										<img class="freeProductSelection_itemProductBlock_image" alt="" src="https://s1.thcdn.com//productimg/70/70/13946074-9524999002458895.jpg">
+
+									</div>
+									<div class="freeProductSelection_itemProductBlock_title">
+										SEEN Shampoo 1 fl. oz (Worth $5.00)
+
+										<div class="freeProductSelection_productVariation_optionDesc" data-option-desc=""></div>
+									</div>
+									<div class="freeProductSelection_infoIconContainer" data-popup-select-id="13946074">
+										<button data-js-element="freeProductSelection_freeGiftInfoIcon" class="freeProductSelection_freeGiftInfoButton" data-product-info="" aria-label="More Information" title="More Information" type="button">
+										<svg class="freeProductSelection_infoIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill="none" fill-rule="evenodd"><circle class="freeProductSelection_infoIconCircle" cx="12" cy="12" r="12" fill="#CCC"></circle><path fill="#333" d="M14.82 17.49l-.19.798c-.569.232-1.024.409-1.362.53a3.485 3.485 0 0 1-1.181.182c-.69 0-1.225-.174-1.608-.52a1.706 1.706 0 0 1-.573-1.32c0-.207.014-.42.043-.636.029-.216.074-.46.138-.733l.711-2.596c.064-.248.118-.484.16-.707.042-.2.063-.403.065-.608 0-.332-.066-.563-.2-.694-.132-.13-.384-.196-.76-.196-.184 0-.373.031-.565.09-.194.058-.36.116-.498.169l.19-.8c.466-.197.911-.364 1.337-.503.426-.14.83-.21 1.21-.21.684 0 1.212.172 1.583.513.37.34.556.783.556 1.329 0 .112-.012.311-.038.595a4.1 4.1 0 0 1-.143.782l-.708 2.586c-.058.208-.11.445-.155.712-.047.266-.07.468-.07.604 0 .345.074.578.223.703.15.125.408.186.776.186.171 0 .367-.031.585-.093.218-.062.376-.117.474-.164zM15 6.634c0 .45-.165.835-.496 1.151-.33.318-.728.476-1.193.476-.466 0-.865-.158-1.199-.476-.333-.316-.5-.7-.5-1.152 0-.449.167-.834.5-1.155.334-.32.733-.479 1.2-.479.464 0 .863.16 1.192.48.331.32.496.705.496 1.154z"></path></g></svg>
+
+										</button>
+									</div>
+									</a>
+
+								</div>
+
+								<div class="freeProductSelection_item">
+									<a href="javascript:;" class="freeProductSelection_itemProductBlock" data-js-element="freeProductSelection_itemProductBlock" data-sku="13949139" data-offer="1090607" data-master-sku="13949139" data-tier="0" data-gift-id="1394913910906070" data-product-item="">
+									<div class="freeProductSelection_itemProductBlock_imageContainer" data-free-gift-image="13949139">
+										<img class="freeProductSelection_itemProductBlock_image" alt="" src="https://s1.thcdn.com//productimg/70/70/13949139-1784991522089203.jpg">
+
+									</div>
+									<div class="freeProductSelection_itemProductBlock_title">
+										Estée Lauder ANR Supercharge Eye Gel Crème 0.5ml
+
+										<div class="freeProductSelection_productVariation_optionDesc" data-option-desc=""></div>
+									</div>
+									<div class="freeProductSelection_infoIconContainer" data-popup-select-id="13949139">
+										<button data-js-element="freeProductSelection_freeGiftInfoIcon" class="freeProductSelection_freeGiftInfoButton" data-product-info="" aria-label="More Information" title="More Information" type="button">
+										<svg class="freeProductSelection_infoIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill="none" fill-rule="evenodd"><circle class="freeProductSelection_infoIconCircle" cx="12" cy="12" r="12" fill="#CCC"></circle><path fill="#333" d="M14.82 17.49l-.19.798c-.569.232-1.024.409-1.362.53a3.485 3.485 0 0 1-1.181.182c-.69 0-1.225-.174-1.608-.52a1.706 1.706 0 0 1-.573-1.32c0-.207.014-.42.043-.636.029-.216.074-.46.138-.733l.711-2.596c.064-.248.118-.484.16-.707.042-.2.063-.403.065-.608 0-.332-.066-.563-.2-.694-.132-.13-.384-.196-.76-.196-.184 0-.373.031-.565.09-.194.058-.36.116-.498.169l.19-.8c.466-.197.911-.364 1.337-.503.426-.14.83-.21 1.21-.21.684 0 1.212.172 1.583.513.37.34.556.783.556 1.329 0 .112-.012.311-.038.595a4.1 4.1 0 0 1-.143.782l-.708 2.586c-.058.208-.11.445-.155.712-.047.266-.07.468-.07.604 0 .345.074.578.223.703.15.125.408.186.776.186.171 0 .367-.031.585-.093.218-.062.376-.117.474-.164zM15 6.634c0 .45-.165.835-.496 1.151-.33.318-.728.476-1.193.476-.466 0-.865-.158-1.199-.476-.333-.316-.5-.7-.5-1.152 0-.449.167-.834.5-1.155.334-.32.733-.479 1.2-.479.464 0 .863.16 1.192.48.331.32.496.705.496 1.154z"></path></g></svg>
+
+										</button>
+									</div>
+									</a>
+
+								</div>
+
+
+						</div>
+
+						</div>
+
+
+			</div>
+		  </div>
+		</div>
+
+		<h3>Total Savings:</h3>
+		<div class="tota1SavingsMessage">
+			FREE SkinMedica Vitamin C+E Complex 0.25 oz (worth$30) when you spend $160 or
+			more on the brand
+			
+		</div>
+			
+				<input type="text" id="promo-code"  placeholder="Got a coupon code? Enter it here">
+		<button id="apply-promo">Apply</button>
+		
+
+		<div class="continue">
+			<a class="continue-shopping" >Continue Shopping</a>
+		</div>
+			
+			
+
+
+	</div>
+	<div id="cart-summary">
+		<p>Number of Items: <span id="cart-count">0</span></p>
+		<p>Total Price: <span id="cart-price">$0</span></p>
+	</div>
+</body>
+<script src="cart.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
