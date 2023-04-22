@@ -331,3 +331,5 @@ function Tsort(){
       localStorage.setItem("ProductKiDetails", JSON.stringify(data));
       window.location.href='detailpage.html'
    }
+
+   
