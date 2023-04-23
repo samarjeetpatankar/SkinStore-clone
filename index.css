@@ -73,17 +73,18 @@
   }
   #menu {
     display: flex;
-    margin: 0 150px 10px 100px;
+    margin: 0 150px 10px 150px;
   }
   #menu > p {
     padding: 10px;
     font-family: "Lato", sans-serif;
   }
   #menu > p:hover {
-    padding: 10px;
-    /* cursor: pointer; */
+    /* padding: 1px; */
+    cursor: pointer;
     background-color: black;
     color: white;
+    height: 25px;
   }
 
 body {
@@ -101,6 +102,7 @@ body {
     padding: 18px 0px;
     background-color: rgb(242, 242, 242);
     justify-content: center;
+    margin-top: -30px;
     
   }
   #someOtherOffer a {
@@ -121,6 +123,7 @@ body {
     color: white;
     background-color: black;
     height: 36px;
+    margin: 20px 0px 20px 0px;
     align-items: center;
   }
   #shop:hover {
@@ -130,6 +133,7 @@ body {
   }
   #buttonOnIMG1 {
     padding: 5px;
+    margin-top: 10px;
   }
   #buttonOnIMG1:hover {
     background-color: #28bdb7;

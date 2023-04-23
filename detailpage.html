@@ -210,20 +210,37 @@
     #search_bar > button:hover {
       border: none;
     }
+    #acc_Cart > a button {
+    padding: 10px;
+    font-size: 17px;
+    width: 125px;
+    border: none;
+    background-color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    /* margin-right: 20px; */
+  }
 
-    #acc_Cart > button {
-      padding: 10px;
-      font-size: 17px;
-      width: 125px;
-      border: none;
-      background-color: #ffffff;
-      font-family: "Lato", sans-serif; 
-      font-weight: 600;
-      /* margin-right: 20px; */
-    }
-    #acc_Cart > button:hover {
-      background-color: rgb(229, 229, 229);
-    }
+  #acc_Cart > a button:hover {
+    background-color: rgb(229, 229, 229);
+  }
+  #acc_Cart >  button{
+    padding: 10px;
+    font-size: 17px;
+    width: 125px;
+    border: none;
+    background-color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    /* margin-right: 20px; */
+  }
+  #acc_Cart > button:hover {
+    background-color: rgb(229, 229, 229);
+  }
     #menu {
       display: flex;
       margin: 0 150px 10px 100px;
@@ -233,10 +250,11 @@
       font-family: "Lato", sans-serif;
     }
     #menu > p:hover {
-      padding: 10px;
-      cursor: pointer;
-      background-color: black;
-      color: white;
+      /* padding: 1px; */
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    height: 45px;
     }
     </style>
   </head>
@@ -244,7 +262,7 @@
 
 
     <!-- Nabar details -->
-    <div id="parent">
+     <div id="parent">
         <a href="#"
           ><img
             id="logo"
@@ -262,11 +280,18 @@
           </button>
         </div>
         <div id="acc_Cart">
+          <a href="LoginSigninPage/login.html">
           <button>
             <i style="font-size: 20px; padding: 5px" class="fa-solid fa-user"></i>
             Account
           </button>
-          <button>Cart</button>
+        </a>
+        <a href="cart.html">
+          <button>
+            <i style="font-size: 20px; padding: 5px" class="fa-solid fa-cart-shopping"></i>
+            Cart
+          </button>
+        </a>
         </div>
       </div>
       <div id="menu">
