@@ -333,3 +333,6 @@ function Tsort(){
    }
 
    
+   function redirectToHome(){
+    window.location.href = "index.html";
+  }

@@ -29,7 +29,7 @@
   <body>
     <div id="parent">
       <a href="#"
-        ><img
+        ><img onclick="redirectToHome()"
           id="logo"
           src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
           alt="logo"
@@ -402,4 +402,9 @@
    function redirectToProduct(){
     window.location.href = "Product.html";
   }
+
+  function redirectToHome(){
+    window.location.href = "index.html";
+  }
+  
 </script>

@@ -138,7 +138,7 @@ margin: 2px 20px 2px 20px;
 }
 #search_bar {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 0px;
 }
 #search_bar > button {
@@ -151,41 +151,41 @@ margin: 2px 20px 2px 20px;
 #search_bar > button:hover {
   border: none;
 }
-
 #acc_Cart > a button {
-  padding: 10px;
-  font-size: 17px;
-  width: 125px;
-  border: none;
-  background-color: #ffffff;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  color: #000000;
-  cursor: pointer;
-  /* margin-right: 20px; */
+padding: 10px;
+font-size: 17px;
+width: 125px;
+border: none;
+background-color: #ffffff;
+font-family: "Lato", sans-serif;
+font-weight: 600;
+color: #000000;
+cursor: pointer;
+/* margin-right: 20px; */
 }
 
 #acc_Cart > a button:hover {
-  background-color: rgb(229, 229, 229);
+background-color: rgb(229, 229, 229);
 }
 #acc_Cart >  button{
-  padding: 10px;
-  font-size: 17px;
-  width: 125px;
-  border: none;
-  background-color: #ffffff;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  color: #000000;
-  cursor: pointer;
-  /* margin-right: 20px; */
+padding: 10px;
+font-size: 17px;
+width: 125px;
+border: none;
+background-color: #ffffff;
+font-family: "Lato", sans-serif;
+font-weight: 600;
+color: #000000;
+cursor: pointer;
+/* margin-right: 20px; */
 }
 #acc_Cart > button:hover {
-  background-color: rgb(229, 229, 229);
+background-color: rgb(229, 229, 229);
 }
 #menu {
   display: flex;
-  margin: 0 150px 10px 150px;
+  margin: 0 150px 10px 100px;
+  cursor: pointer;
 }
 #menu > p {
   padding: 10px;
@@ -193,10 +193,10 @@ margin: 2px 20px 2px 20px;
 }
 #menu > p:hover {
   /* padding: 1px; */
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  height: 25px;
+cursor: pointer;
+background-color: black;
+color: white;
+height: 45px;
 }
 
 #footer {
