@@ -1,298 +1,312 @@
 #yourcart {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: xx-large;
-    font-weight: 600;
-    margin: 30px;
-    margin-left: 20%;
-  }
-  .cartContainer {
-    /* max-width: 100%; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  font-weight: 600;
+  margin: 30px;
+  margin-left: 5%;
+}
+.cartContainer {
+  /* max-width: 100%; */
+
+  /* padding: 1em; */
+  /* box-sizing: border-box; */
+  /*border: 3px solid rgba(153, 153, 153, 0.87);*/
+  width: 100%;
   
-    /* padding: 1em; */
-    /* box-sizing: border-box; */
-    border: 3px solid rgba(153, 153, 153, 0.87);
-    width: 100%;
-    
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  border-radius: 10px;
+  
+}
+
+table {
+  width: 80%;
+  margin: 0 80px 0 80px;
+  /* border: 2px solid rgb(77, 72, 72); */
+  border-collapse: collapse;
+  cursor: pointer;
+  border: none;
+}
+th {
+  text-align: left;
+  padding: 5px;
+ 
+  border-bottom: 2px solid grey;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  /* border-collapse: collapse; */
+  min-width: 40px;
+  text-align: center;
+}
+th:nth-child(1){
+  border-left: none;
+}
+th:nth-child(5){
+  border-right: none;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+.CartSubtotal{
+ margin-right: 87px;
+ font-weight:bold;
+
+}
+#yourcart{
+  margin-left: 160px;
+}
+
+
+
+td {
+  text-align: center;
+  padding: 10px 5px;
+  border-bottom: 0.6px solid grey;
+  border-top: 0.6px solid grey;
+  /* border-left: 1px solid black; */
+  /* border-right: 1px solid black; */
+}
+
+td input {
+  width: 30px;
+  height: 20px;
+  padding: 5px;
+}
+img {
+  width: 100px;
+  height: 80px;
+  /* height: 80px; */
+  margin-right: 10px;
+}
+/* .products{ */
+  /* border: 0.6px solid grey; */
+/* } */
+.products p {
+
+  flex: 1;
+}
+
+
+
+
+
+
+
+.CartSubtotal {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+.CartSubtotal table {
+  max-width: 300px;
+  width: 80%;
+  margin: 0 80px 0 80px;
+
+  border-bottom: 3px solid grey;
+  border-top: none
+}
+
+
+
+/* Last Buttons */
+#buttons{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-  
-    border-radius: 10px;
-    
-  }
-  
-  table {
-    width: 80%;
-    margin: 0 80px 0 80px;
-    /* border: 2px solid rgb(77, 72, 72); */
-    border-collapse: collapse;
-  }
-  th {
-    text-align: left;
-    padding: 5px;
-    border-bottom: 2px solid grey;
-    /* border-top: 1px solid black; */
-    border-left: 2px solid grey;
-    border-right: 2px solid grey;
-    border-collapse: collapse;
-    min-width: 40px;
-  }
-  th:nth-child(1){
-    border-left: none;
-  }
-  th:nth-child(5){
-    border-right: none;
-  }
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-  }
-  
-  td {
-    text-align: center;
-    padding: 10px 5px;
-    border-bottom: 0.6px solid grey;
-    border-top: 0.6px solid grey;
-    /* border-left: 1px solid black; */
-    /* border-right: 1px solid black; */
-  }
-  
-  td input {
-    width: 40px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+}
+#buttons button{
     height: 30px;
-    padding: 5px;
-  }
-  img {
-    width: 100px;
-    height: 80px;
-    /* height: 80px; */
-    margin-right: 10px;
-  }
-  /* .products{ */
-    /* border: 0.6px solid grey; */
-  /* } */
-  .products p {
-  
-    flex: 1;
-  }
-  
-  
-  
-  
-  
-  
-  
-  .CartSubtotal {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 50px;
-  }
-  
-  .CartSubtotal table {
-    max-width: 300px;
-    width: 80%;
-    margin: 0 80px 0 80px;
-  
-    border-bottom: 3px solid grey;
-    border-top: none
-  }
-  
-  
-  
-  /* Last Buttons */
-  #buttons{
+    width: 300px;
+    padding: 30px;
+    padding-top: 10px;
+    transition: 0.3s;
+    border: none;
+    font-weight: 100;
+    /* border-radius: 10px; */
+    cursor: pointer;
+}
+#buttons button:first-child{
+    color: black;
+    background-color: rgb(197, 199, 201);
+}
+#buttons button:nth-child(2){
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 10, 10);
+}
+#buttons button:first-child:hover{
+    color: black;
+    background-color: rgb(139, 140, 141);
+}
+#buttons button:nth-child(2):hover{
+    color: rgb(2, 2, 2);
+    background-color: rgb(72, 253, 253);
+}
+
+/* @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+  } */
+
+  #parent {
       display: flex;
       justify-content: space-around;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      /* background-color: aquamarine; */
-  }
-  #buttons button{
-      height: 30px;
-      width: 300px;
-      padding: 30px;
-      padding-top: 10px;
-      transition: 0.3s;
-      border: none;
-      font-weight: 100;
-      /* border-radius: 10px; */
-      cursor: pointer;
-  }
-  #buttons button:first-child{
-      color: black;
-      background-color: rgb(197, 199, 201);
-  }
-  #buttons button:nth-child(2){
-      color: rgb(255, 255, 255);
-      background-color: rgb(10, 10, 10);
-  }
-  #buttons button:first-child:hover{
-      color: black;
-      background-color: rgb(139, 140, 141);
-  }
-  #buttons button:nth-child(2):hover{
-      color: rgb(2, 2, 2);
-      background-color: rgb(72, 253, 253);
-  }
-  
-  /* @media only screen and (max-width: 600px) {
-      body {
-        background-color: lightblue;
-      }
-  
-    } */
-
-    #parent {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border-bottom: 1.8px solid black;
-        padding-top: 12px;
-        padding-bottom: 12px;
-      }
-      #logo {
-        width: 220px;
-        height: 84px;
-      }
-      #search_bar > input {
-        width: 380px;
-        height: 40px;
-        padding: 0px 10px;
-        border: 1px solid grey;
-        border-right: 0px;
-        font-size: 14px;
-        color: rgb(46, 51, 55);
-        font-family: "Lato", sans-serif;
-      }
-      #search_bar {
-        display: flex;
-        align-items: center;
-        gap: 0px;
-      }
-      #search_bar > button {
-        height: 42px;
-        width: 45px;
-        border: 1px solid grey;
-        /* margin-left: -10px; */
-        border-color: lightgrey;
-      }
-      #search_bar > button:hover {
-        border: none;
-      }
-  
-      #acc_Cart > button {
-        padding: 10px;
-        font-size: 17px;
-        width: 125px;
-        border: none;
-        color: black;
-        background-color: #ffffff;
-        font-family: "Lato", sans-serif;
-        font-weight: 600;
-        /* margin-right: 20px; */
-      }
-      #acc_Cart > button:hover {
-        background-color: rgb(229, 229, 229);
-      }
-      #menu {
-        display: flex;
-        margin: 0 150px 10px 100px;
-      }
-      #menu > p {
-        padding: 10px;
-        font-family: "Lato", sans-serif;
-      }
-      #menu > p:hover {
-        padding: 10px;
-        /* cursor: pointer; */
-        background-color: black;
-        color: white;
-      }
-
-      #footer {
-        display: flex;
-        gap: 50px;
-        padding: 0 100px;
-        border-bottom: 1px solid black;
-      }
-      #footer_1 > div:first-child,
-      #footer_2 > div:first-child {
-        height: 100px;
-      }
-      #footer_links {
-        display: flex;
-        gap: 50px;
-      }
-      p {
-        height: 25px;
-        /* width: 250px; */
-        padding: 5px;
-        /* margin: 5px; */
-      }
-      p:hover {
-        background-color: lightgray;
-      }
-      button {
-        width: 78px;
-        height: 42px;
-        border: none;
-        background-color: black;
-        color: white;
-        font-size: 15px;
-      }
-      button:hover {
-        background-color: mediumturquoise;
-        color: black;
-      }
-
-  
-  @media only screen and (max-width: 320px) {
-    /* CSS rules for iPhone SE */
-    .cartContainer {
-      max-width: 750px;
-      margin: 0 0 0 0;
-      padding: 0;
-      box-sizing: border-box;
+      align-items: center;
+      border-bottom: 1.8px solid black;
+      padding-top: 12px;
+      padding-bottom: 12px;
     }
-    table {
-      /* width: 100%; */
-      /* margin: 0 80px 0 80px;   */
-      /* border: 2px solid rgb(77, 72, 72); */
-      border-collapse: collapse;
-      margin: 0;
-      padding: 0;
+    #logo {
+      width: 220px;
+      height: 84px;
+    }
+    #search_bar > input {
+      width: 380px;
+      height: 40px;
+      padding: 0px 10px;
+      border: 1px solid grey;
+      border-right: 0px;
+      font-size: 14px;
+      color: rgb(46, 51, 55);
+      font-family: "Lato", sans-serif;
+    }
+    #search_bar {
       display: flex;
-      justify-content: flex-start;
+      align-items: center;
+      gap: 0px;
     }
+    #search_bar > button {
+      height: 42px;
+      width: 45px;
+      border: 1px solid grey;
+      /* margin-left: -10px; */
+      border-color: lightgrey;
+    }
+    #search_bar > button:hover {
+      border: none;
+    }
+
+    #acc_Cart > button {
+      padding: 10px;
+      font-size: 17px;
+      width: 125px;
+      border: none;
+      color: black;
+      background-color: #ffffff;
+      font-family: "Lato", sans-serif;
+      font-weight: 600;
+      /* margin-right: 20px; */
+    }
+    #acc_Cart > button:hover {
+      background-color: rgb(229, 229, 229);
+    }
+    #menu {
+      display: flex;
+      margin: 0 150px 10px 100px;
+    }
+    #menu > p {
+      padding: 10px;
+      font-family: "Lato", sans-serif;
+    }
+    #menu > p:hover {
+      padding: 10px;
+      /* cursor: pointer; */
+      background-color: black;
+      color: white;
+    }
+
+    #footer {
+      display: flex;
+      gap: 50px;
+      padding: 0 100px;
+      border-bottom: 1px solid black;
+    }
+    #footer_1 > div:first-child,
+    #footer_2 > div:first-child {
+      height: 100px;
+    }
+    #footer_links {
+      display: flex;
+      gap: 50px;
+    }
+    p {
+      height: 25px;
+      /* width: 250px; */
+      padding: 5px;
+      /* margin: 5px; */
+    }
+    p:hover {
+      background-color: lightgray;
+    }
+    button {
+      width: 78px;
+      height: 42px;
+      border: none;
+      background-color: black;
+      color: white;
+      font-size: 15px;
+    }
+    button:hover {
+      background-color: mediumturquoise;
+      color: black;
+    }
+
+
+@media only screen and (max-width: 320px) {
+  /* CSS rules for iPhone SE */
+  .cartContainer {
+    max-width: 750px;
+    margin: 0 0 0 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  
-  @media screen and (min-width: 768px) {
-    .cartContainer {
-      max-width: 750px;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    table {
-      width: 100%;
-      /* margin: 0 80px 0 80px;   */
-      /* border: 2px solid rgb(77, 72, 72); */
-      border-collapse: collapse;
-      margin: 0;
-      padding: 0;
-    }
+  table {
+    /* width: 100%; */
+    /* margin: 0 80px 0 80px;   */
+    /* border: 2px solid rgb(77, 72, 72); */
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
   }
-  
-  @media screen and (min-width: 992px) {
-    .cartContainer {
-      max-width: 970px;
-    }
+}
+
+@media screen and (min-width: 768px) {
+  .cartContainer {
+    max-width: 750px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  
-  @media screen and (min-width: 1200px) {
-    .cartContainer {
-      max-width: 1170px;
-    }
+  table {
+    width: 100%;
+    /* margin: 0 80px 0 80px;   */
+    /* border: 2px solid rgb(77, 72, 72); */
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
   }
-  
+}
+
+@media screen and (min-width: 992px) {
+  .cartContainer {
+    max-width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cartContainer {
+    max-width: 1170px;
+  }
+}
