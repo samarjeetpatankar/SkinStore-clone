@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaMenu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Lato", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        background: #ddd;
+        margin: 0;
+        /* font-family: ""; */
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      nav {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        /* text-align: left; */
+      }
+      nav li {
+        display: inline-block;
+      }
+      nav a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 0.75em 0.75em;
+      }
+      nav li:hover {
+        background-color: grey;
+      }
+      nav a:hover {
+        background-color: black;
+        color: white;
+      }
+      .menu_sub {
+        position: absolute;
+        left: 50px;
+        width: 90%;
+        background-color: lightgrey;
+        display: none;
+        padding: 2em;
+        border: 0.5px solid grey;
+      }
+      .menu_sub li {
+        display: block;
+      }
+      nav li:hover .menu_sub {
+        display: block;
+      }
+      nav li:hover #brands-s {
+        display: block;
+      }
+      .menu_sub a {
+        padding: 0.2em;
+        margin-bottom: 0.2em;
+      }
+      .menu_sub a:hover {
+        background-color: grey;
+        color: black;
+      }
+      .menu_cat {
+        margin: 0.5em 0 0.5em 0;
+      }
+      .menu_cat:first-of-type {
+        margin-top: 0;
+      }
+      .menu_col {
+        /* width: 50%; */
+        display: flex;
+        gap: 50px;
+        justify-content: space-evenly;
+      }
+      h4 {
+        padding-top: 10px;
+        border-top: 0.8px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <ul class="main_menu">
+          <li class="menu_item">
+            <a href="#">Brands</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">New</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">New In</h4>
+                  <ul>
+                    <li><a href="">Shop All</a></li>
+                    <li><a href="">Skin Care</a></li>
+                    <li><a href="">Hair Care</a></li>
+                    <li><a href="">MakeUp</a></li>
+                    <li><a href="">Bath & Body</a></li>
+                    <li><a href="">Fragrance</a></li>
+                    <li><a href="">Beauty Tolls & Devices</a></li>
+                    <li><a href="">Mens</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Just Launched</h4>
+                  <ul>
+                    <li><a href="">Sarah Chapman</a></li>
+                    <li><a href="">ISDIN</a></li>
+                    <li><a href="">Jason Wu Beauty</a></li>
+                    <li><a href="">Mermade Hair</a></li>
+                    <li><a href="">Act + Acre</a></li>
+                    <li><a href="">Ellis Brooklyn</a></li>
+                    <li><a href="">Rituals</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Shop In</h4>
+                  <ul>
+                    <li><a href="">Shop All</a></li>
+                    <li><a href="">Skin Care</a></li>
+                    <li><a href="">Hair Care</a></li>
+                    <li><a href="">MakeUp</a></li>
+                    <li><a href="">Bath & Body</a></li>
+                    <li><a href="">Fragrance</a></li>
+                    <li><a href="">Beauty Tolls & Devices</a></li>
+                    <li><a href="">Mens</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Trending</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Popular Categories</h4>
+                  <ul>
+                    <li><a href="">Shop All</a></li>
+                    <li><a href="">Best Selling Beauty Products</a></li>
+                    <li><a href="">Best of Indian Brands</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Beauty Trends</h4>
+                  <ul>
+                    <li><a href="">At-Home Pedicure</a></li>
+                    <li><a href="">Clean Beauty</a></li>
+                    <li><a href="">Y2K Inspired</a></li>
+                    <li><a href="">Its all about eye MakeUp</a></li>
+                    <li><a href="">Skin care as makeup</a></li>
+                    <li><a href="">At home treatments</a></li>
+                    <li><a href="">Skin cycling</a></li>
+                    <li><a href="">Scalp Care</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Skin</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Hair</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Makeup</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Tools</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Bath</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Self</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Fragrance</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Sale</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Routine</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Hand</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Hair</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <a href="#">Blog</a>
+            <div class="menu_sub">
+              <div class="menu_col">
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="menu_cat">Latest Brands</h4>
+                  <ul>
+                    <li><a href="">Sugar</a></li>
+                    <li><a href="">MyGlamm</a></li>
+                    <li><a href="">Lakme</a></li>
+                    <li><a href="">Nivea</a></li>
+                    <li><a href="">Lotus</a></li>
+                    <li><a href="">Biotique</a></li>
+                    <li><a href="">Maybelline</a></li>
+                    <li><a href="">Mamaearth</a></li>
+                    <li><a href="">Colorbar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

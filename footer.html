@@ -25,6 +25,8 @@
         /* width: 250px; */
         padding: 5px;
         /* margin: 5px; */
+        /* align-items: center; */
+        /* text-align: left; */
       }
       p:hover {
         background-color: lightgray;
@@ -41,6 +43,16 @@
         background-color: mediumturquoise;
         color: black;
       }
+      img {
+        margin: 5px 10px 0px 10px;
+        height: 40px;
+        width: 40px;
+      }
+      ion-icon {
+        font-size: 24px;
+        text-align: center;
+        /* padding: 15px; */
+      }
     </style>
   </head>
   <body>
@@ -52,16 +64,51 @@
         </div>
         <div>
           <h2>Help & Information</h2>
-          <p>Customer Service</p>
-          <p>Delivery Information</p>
-          <p>Returns & Refunds</p>
-          <p>Help Center</p>
-          <p>Track my order</p>
+          <p>
+            <span><ion-icon name="call"></ion-icon></span>
+            Customer Service
+          </p>
+          <p>
+            <span><ion-icon name="car"></ion-icon></span>Delivery Information
+          </p>
+          <p>
+            <span><ion-icon name="refresh-circle"></ion-icon></span>Returns &
+            Refunds
+          </p>
+          <p>
+            <span><ion-icon name="help"></ion-icon></span>Help Center
+          </p>
+          <p>
+            <span><ion-icon name="locate"></ion-icon></span>Track my order
+          </p>
         </div>
       </div>
       <div id="footer_2">
-        <div style="border-bottom: 1px solid black">
+        <div id="con" style="border-bottom: 1px solid black">
           <h2>Connect with us</h2>
+          <div class="social">
+            <a href="https://www.facebook.com/SkinStore" target="_blank"
+              ><img
+                src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png"
+                alt=""
+            /></a>
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png"
+              alt=""
+            />
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png"
+              alt=""
+            />
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"
+              alt=""
+            />
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png"
+              alt=""
+            />
+          </div>
         </div>
         <div id="footer_links">
           <div>
@@ -90,5 +137,6 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
 </html>
