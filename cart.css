@@ -1,3 +1,82 @@
+ /* navbar only */
+
+ .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+nav {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  /* text-align: left; */
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 0.75em 0.75em;
+}
+nav li:hover {
+  background-color: white;
+}
+nav a:hover {
+  background-color: black;
+  color: white;
+}
+.menu_sub {
+  position: absolute;
+  left: 50px;
+  width: 90%;
+  background-color: lightgrey;
+  display: none;
+  padding: 2em;
+  border: 0.5px solid grey;
+}
+.menu_sub li {
+  display: block;
+}
+nav li:hover .menu_sub {
+  display: block;
+}
+nav li:hover #brands-s {
+  display: block;
+}
+.menu_sub a {
+  padding: 0.2em;
+  margin-bottom: 0.2em;
+}
+.menu_sub a:hover {
+  background-color: white;
+  color: black;
+}
+.menu_cat {
+  margin: 0.5em 0 0.5em 0;
+}
+.menu_cat:first-of-type {
+  margin-top: 0;
+}
+.menu_col {
+  /* width: 50%; */
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+}
+h4 {
+  padding-top: 10px;
+  border-top: 0.8px solid grey;
+}
+
+/* navbar ends */
+
 #yourcart {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: xx-large;
