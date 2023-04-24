@@ -11,11 +11,7 @@
   flex-direction: column;
   margin-top: -50px;
 }
-#sortingarea{
-  width: auto;
-  display: flex;
-  flex-direction: column;
-}
+
 
 #container {
 display: grid;
@@ -95,6 +91,12 @@ display: none;
 border: 0px;
 padding: 5px;
 margin: 10px 0px 0px 18px;
+}
+
+#sortingarea{  
+  width: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 #FilterAndSortBox {
@@ -233,4 +235,26 @@ button {
 button:hover {
   background-color: mediumturquoise;
   color: black;
+}
+
+
+@media only screen and (max-width: 820px) { 
+  
+  .ProductTypeTittle {
+    font-size: 10px;
+  }
+  
+  #sortingarea{
+    font-size: 9px;
+    flex-direction: column;
+  }
+
+  #container{
+    
+  }
+}
+
+@media only screen and (max-width: 500px) { 
+
+
 }
