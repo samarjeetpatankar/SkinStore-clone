@@ -82,14 +82,15 @@ h4 {
     font-size: xx-large;
     font-weight: 600;
     margin: 30px;
-    margin-left: 20%;
+    margin-left: 11%;
+    
   }
   .cartContainer {
     /* max-width: 100%; */
   
     /* padding: 1em; */
     /* box-sizing: border-box; */
-    border: 3px solid rgba(153, 153, 153, 0.87);
+    /* border: 3px solid rgba(153, 153, 153, 0.87); */
     width: 100%;
     
     display: flex;
@@ -107,14 +108,15 @@ h4 {
     border-collapse: collapse;
   }
   th {
-    text-align: left;
+    text-align: center;
     padding: 5px;
     border-bottom: 2px solid grey;
-    /* border-top: 1px solid black; */
+    border-top: 1px solid black; 
     border-left: 2px solid grey;
     border-right: 2px solid grey;
     border-collapse: collapse;
     min-width: 40px;
+    
   }
   th:nth-child(1){
     border-left: none;
@@ -138,8 +140,8 @@ h4 {
   }
   
   td input {
-    width: 40px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
     padding: 5px;
   }
   img {
@@ -166,6 +168,9 @@ h4 {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 50px;
+    margin-right: 87px;
+    font-weight: bold;
+    font-size: 24px;
   }
   
   .CartSubtotal table {
