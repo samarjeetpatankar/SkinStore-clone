@@ -538,6 +538,7 @@ body {
         position: absolute;
          bottom: 470px;
          left: 30px;
+        
       }
       .bottom-left > h1 {
         font-size: 10px;
@@ -545,13 +546,19 @@ body {
 
       .bottom-left > p {
         font-size: 10px;
-        margin-bottom: -20px;
+        margin-bottom: 150px;
       }
       
       .bottom-left > button {
         font-size: 10px;  
+        margin-top: 90px;
+        background-color: aquamarine;
+        
       }
-
+      #buttonOnIMG1{
+        margin-top: 200px;
+        background-color: aquamarine;
+      }
       .shopby > h1 {
         font-size: 20px;
         margin-left: -520px;
