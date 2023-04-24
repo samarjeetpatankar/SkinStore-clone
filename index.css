@@ -462,16 +462,17 @@ body {
   #footer_2 > div:first-child {
     height: 100px;
   }
-
   #footer_links {
     display: flex;
     gap: 50px;
   }
   p {
-    height: 50px;
+    height: 25px;
     /* width: 250px; */
     padding: 5px;
     /* margin: 5px; */
+    /* align-items: center; */
+    /* text-align: left; */
   }
   p:hover {
     background-color: lightgray;
@@ -487,6 +488,16 @@ body {
   button:hover {
     background-color: mediumturquoise;
     color: black;
+  }
+  .social > img {
+    margin: 5px 10px 0px 10px;
+    height: 40px;
+    width: 40px;
+  }
+  .ion-icon {
+    font-size: 24px;
+    text-align: center;
+    /* padding: 15px; */
   }
 
 
