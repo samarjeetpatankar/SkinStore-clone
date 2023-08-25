@@ -17,5 +17,5 @@ Through developing this project, I honed my front-end development skills and gai
 Visit the [Live Site](https://skinstore-clone-pt12.netlify.app/) to explore the Skinstore Clone project. Feel free to navigate through the website and experience the seamless shopping interface.
 
 Don't hesitate to reach out for more details, feedback, or inquiries!
-
 ![Skinstore Image](https://i.ibb.co/wcdZjrG/skinstore.png)
+
